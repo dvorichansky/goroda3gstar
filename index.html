@@ -1,0 +1,603 @@
+<!-- 
+== DOCUMENT READY ==
+01.2019 document html/php
+by dvorichansky 
+https://www.facebook.com/bogdan.dvorichansky
+https://www.behance.net/bogdangbhjb27a
+bogdangbhj@gmail.com
+-->
+<?
+
+//kosenko 01-09-2016 запись get-меток с url в cookie
+if(isset($_GET['utm_source'])) {
+$str = strpos($_SERVER['QUERY_STRING'], "utm_source");
+$utm = substr($_SERVER['QUERY_STRING'], $str);
+
+setcookie('utm', $utm, time()+7776000, '/', 'goroda.3gstar.com.ua');
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MWBBWT');</script>
+<!-- End Google Tag Manager -->
+<title> ЗАПОЛНИТЬ </title>
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/step-order.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content=" ЗАПОЛНИТЬ ">
+<meta name="keywords" content=" ЗАПОЛНИТЬ " />
+<meta name="robots" content="index" />
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWBBWT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- top-header-section -->
+	<section id="mainmenu" class="mainmenu-area">
+		<div class="container">
+			<div class="row">					
+				<div class="col-md-12">
+					<div class="navbar-collaps">								
+						<!-- nav -->
+						<nav class="mainMenu">
+							<div class="logo-white desktop-hide">
+								<a href="index.html"><img src="images/logo-white.png" class="img-responsive" /></a>
+							</div>
+							<div class="menuButton hidden-lg hidden-md">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<ul>
+								<li class="scroll"><a href="#pokritie">Покрытие</a></li>
+                <li><a target="_blank" href="https://3gstar.com.ua/bezlimitnie-tarifi.html">Тарифы</a></li>
+                <li><a target="_blank" href="https://3gstar.com.ua/3g-usb-modemy-c-133.html">4G/3G модемы</a></li>
+                <li><a target="_blank" href="https://3gstar.com.ua/perenosnie-routery-c-89.html">Wi-Fi роутеры</a></li>
+                <li><a target="_blank" href="https://3gstar.com.ua/tehpoddergka-i-garantii.html">Гарантии</a></li>
+                <li class="scroll"><a href="#otzivi">Отзывы</a></li>
+                <li class="scroll"><a href="#kontakti">Контакты</a></li>
+								<li class="scroll desktop-hide"><a href="viber://pa?chatURI=3gstar" target="_blank"><i class="sb-ico ico-viber-sm"></i>Viber</a></li>
+								<li class="scroll desktop-hide"><a href="https://telegram.me/gstar_bot" target="_blank"><i class="sb-ico ico-telegram-sm"></i>Telegram</a></li>
+							</ul>
+						</nav>
+						<!-- /nav -->
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>	
+	<!-- glav-header-section -->
+	<div class="header">		
+		<div class="container">	
+			<div class="row">
+				<div class="col-lg-6 col-md-5 col-sm-3 hidden-xs">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+					<div class="header-right">
+						<div class="free-number">
+							<i class="phone"></i><div class="utm" id="freephone"><a href="tel:0800210295">0 (800) 210-295</a></div>
+							<p>Звонки со всех телефонов бесплатно</p> 
+						</div>
+						<ul class="messenger hidden-xs">
+							<li class="messenger-viber"><a href="viber://pa?chatURI=3gstar" target="_blank"><i class="sb-ico ico-viber-sm"></i>Viber</a></li>
+							<li class="messenger-telegram"><a href="https://telegram.me/gstar_bot" target="_blank"><i class="sb-ico ico-telegram-sm"></i>Telegram</a></li>
+						</ul>
+						<ul class="mobile-numbers">
+							<li><i class="sb-ico ico-kievstar"></i><div class="utm" id="kievstar"><a href="tel:0979930355">(097) 993-03-55</a></div></li>
+							<li><i class="sb-ico ico-vodafone"></i><div class="utm" id="vodafone"><a href="tel:0503085856">(050) 308-58-56</a></div></li>
+							<li><i class="sb-ico ico-lifecell"></i><div class="utm" id="life"><a href="tel:0634854003">(063) 485-40-03</a></div></li>            
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner-section -->
+	<div class="banner">
+		<div class="container">
+			<div class="banner-info">
+				<h1 class="top-content-text">Беспроводной <span class="white-space">4G / 3G</span> Интернет <br>в г. Чернигов и Черниговской области</h1>
+				<h4>Подключайся к 3G интернету и пользуйся на высокой скорости по всей Украине!</h4>
+				<h3>Попробуй 3G интернет на 30 дней БЕСПЛАТНО!</h3>
+				<button id="buttonContactForm" class="btn btn-1 btn-1d">Попробовать</button>
+			</div>
+			<div class="contact_head" id="contactForm">
+				<div id="contactFormScroll"></div>
+ 				<div class="contact-form_grid">
+ 					<h3 class="hide-call">Заполните форму</h3>
+ 					<p class="hide-call">мы перезвоним Вам в течение 5 минут</p>
+				  <form method="post">
+						<input type="text" class="form-control" id="name fieldName" name="name" placeholder="Ваше имя...">
+						<input type="tel" class="form-control" id="phone" name="phone" placeholder="Ваш телефон...">
+						<button type="submit" data-attr="Узнать подробнее" class="">Отправить заявку</button>
+						<h6>Нажимая на кнопку, Вы даете согласие на <a href="https://3gstar.com.ua/personal-data-processing.html" target="_blank">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности</h6>
+						<div class="loading"></div>
+				  </form>
+				 	<div class="data-success"></div>
+		    </div>
+	     </div>	
+		</div>
+	</div>
+	<!-- form-3-steps-section  -->
+	<div class="section">
+		<div class="container">
+			<h2 class="top-content-text">Выбери лучший интернет за 3 шага!</h2>
+			<p class="description-block text-center">Мы подберем вам лучший вариант беспроводного интернета. Для того, чтобы выбрать оптимального оператора и оборудование, ответьте на следующие вопросы:</p>
+			<div class="step-flex">
+				<div class="step-box step-form-hide">
+					<h3>Шаг 1 - Выбор оборудования</h3>
+					<div class="step-box-content">
+						<p>Для того, чтобы мы подобрали вам правильное оборудование, отметьте на каких устройствах вы планируете пользоваться интернетом</p>
+						<div class="step-order-form-equipment">		 
+							<div class="pc s_o_block_label">
+								<label for="pc" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-1.png" alt="pc">
+									<span class="s_o_title">Компьютер</span>								
+								</label>   
+								<input class="step-order-form-equipment__input" name="pc" id="pc" type="checkbox">   
+							</div>
+							<div class="smartphone s_o_block_label">
+								<label for="smartphone" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-2.png" alt="smartphone">
+									<span class="s_o_title">Смартфон</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="smartphone" id="smartphone" type="checkbox">   
+							</div>
+						</div>
+						<div class="step-order-form-equipment">					
+							<div class="pad s_o_block_label">
+								<label for="pad" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-3.png" alt="pad">
+									<span class="s_o_title">Планшет</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="pad" id="pad" type="checkbox">   
+							</div>
+							<div class="notebook s_o_block_label">
+								<label for="notebook" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-4.png" alt="pad">
+									<span class="s_o_title">Ноутбук</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="notebook" id="notebook" type="checkbox">   
+							</div>
+						</div>
+						<div class="step-order-form-equipment">					
+							<div class="smart_tv s_o_block_label">
+								<label for="smart_tv" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-5.png" alt="smart_tv">
+									<span class="s_o_title">Smart TV</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="smart_tv" id="smart_tv" type="checkbox">   
+							</div>
+							<div class="device s_o_block_label">
+								<label for="device" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-6.png" alt="device">
+									<span class="s_o_title">Другое</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="device" id="device" type="checkbox">   
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="step-box step-form-hide">				
+					<h3>Шаг 2 - Выбор тарифа</h3>
+					<div class="step-box-content">
+						<p>Для того, чтобы мы могли подобрать вам оптимальный тариф, отметьте для чего вам нужен интернет<br><br></p>
+						<div class="step-order-form-equipment">		 
+							<div class="youtube s_o_block_label">
+								<label for="youtube" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-7.png" alt="youtube">
+									<span class="s_o_title">Просмотр видео</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="youtube" id="youtube" type="checkbox">   
+							</div>
+							<div class="fb s_o_block_label">
+								<label for="fb" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-8.png" alt="fb">
+									<span class="s_o_title">Общение в соцсетях</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="fb" id="fb" type="checkbox">   
+							</div>
+						</div>
+						<div class="step-order-form-equipment">					
+							<div class="skype s_o_block_label">
+								<label for="skype" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-9.png" alt="skype">
+									<span class="s_o_title">Общение по скайп</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="skype" id="skype" type="checkbox">   
+							</div>
+							<div class="news s_o_block_label">
+								<label for="news" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-10.png" alt="news">
+									<span class="s_o_title">Чтение новостей</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="news" id="news" type="checkbox">   
+							</div>
+						</div>
+						<div class="step-order-form-equipment">					
+							<div class="mail s_o_block_label">
+								<label for="mail" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-11.png" alt="mail">
+									<span class="s_o_title">Работа с почтой</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="mail" id="mail" type="checkbox">   
+							</div>
+							<div class="games s_o_block_label">
+								<label for="games" class="step-order-form-equipment__label">
+									<img class="step-img" src="images/3-form-step_sprite/3-form-12.png" alt="games">
+									<span class="s_o_title">Онлайн игры</span>
+								</label>   
+								<input class="step-order-form-equipment__input" name="games" id="games" type="checkbox">   
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="step-box step-form-css-animate">
+					<h3 class="step-form-hide">Шаг 3 - Выбор оператора</h3>
+					<div class="step-box-content">
+						<p class="step-form-hide">Введите населенный пункт, в котором вы будете пользоваться интернетом и ваш номер телефона. Мы проверим и сравним всех существующих операторов связи, которые предоставляют покрытие в вашем населенном пункте</p>
+						<form method="post" id="form-step" class="step-form">
+							<div class="contact-form_grid">
+								<input type="text" class="form-control" id="name fieldName" name="name" placeholder="Введите населенный пункт...">
+								<input type="tel" class="form-control" id="phone" name="phone" placeholder="Ваш телефон...">	       	
+								<button type="submit" data-attr="Узнать подробнее" class="buttonn">Отправить заявку на подбор интернета</button>
+								<h6 class="grey-text-form text-center">Нажимая на кнопку, Вы даете согласие на <a href="https://3gstar.com.ua/personal-data-processing.html" target="_blank">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности</h6>
+								<div class="loading"></div>								
+							</div>
+							<div id="scroll-form" class="data-success"></div>
+						</form>
+					</div>			  
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- map-coating-section -->
+	<div id="pokritie" class="section blue-section">		
+		<div class="container">
+			<h2 class="top-content-text">Карта покрытия <span class="white-space">4G / 3G</span></h2>
+			<div id="3g-map" class="map-internet"></div>
+		</div>
+	</div>
+	<!-- equipment-section -->
+	<div class="section-equipment section">
+		<div class="container">
+			<h2 class="top-content-text">Модемы для беспроводного <span class="white-space">4G / 3G</span> интернета</h2>
+			<div class="row flex-row">
+				<div class="col-md-12">
+					<p>Вы можете подключить интернет на 30 дней БЕСПЛАТНО и самостоятельно убедиться в высоком качестве связи. Если вас, что-то не устроит - вы просто вернете все обратно нам!</p>
+				</div>
+				<div class="col-sm-4 col-flex">
+					<div class="home-post" onclick="window.open('https://3gstar.com.ua/perenosnie-routery-c-89.html','_blank')">
+						<div class="post-image">
+							<img class="max-img" src="images/equipment-1.jpg" alt="">
+						</div>
+						<div class="post-meta">
+							<i class="icon-file icon-2x"></i>
+							<h3 class="date">Переносные <span class="white-space">4G / 3G</span> роутеры</h3>
+						</div>
+						<div class="entry-content">
+							<p>Переносным роутером называют "карманное" техническое устройство, объединяющее стандартный 3g модем, аккумулятор и Wi-Fi-раздатчик...</p>
+							<a class="more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-flex">
+					<div class="home-post" onclick="window.open('https://3gstar.com.ua/3g-usb-modemy-c-133.html','_blank')">
+						<div class="post-image">
+							<img class="max-img" src="images/equipment-2.jpg" alt="">
+						</div>
+						<div class="post-meta">
+							<i class="icon-file icon-2x"></i>
+							<h3 class="date"><span class="white-space">4G / 3G</span> модемы</h3>
+						</div>
+						<div class="entry-content">
+							<p>В современных условиях мобильный модем является неотъемлемым атрибутом получения необходимой информации. Он представляет собой...</p>
+							<a class="more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-flex">
+					<div class="home-post" onclick="window.open('https://3gstar.com.ua/router-dlya-doma-c-242.html','_blank')">
+						<div class="post-image">
+							<img class="max-img" src="images/equipment-3.jpg" alt="">
+						</div>
+						<div class="post-meta">
+							<i class="icon-file icon-2x"></i>
+							<h3 class="date">Стационарные <span class="white-space">4G / 3G</span> роутеры</h3>
+						</div>
+						<div class="entry-content">
+							<p>Стационарный роутер - это удобно и эффективно. Он позволяет пользоваться как проводным Интернетом, так и беспроводным...</p>
+							<a class="more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- consultation-engineer-section -->
+	<div class="subscribe-section section">
+		<div class="container">
+			<h2 class="top-content-text color-white">Задать вопрос инженеру</h2>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="contact-engineering">
+						<div class="contact-form_grid">
+		 					<h3 class="hide-call">Оставьте контактные данные</h3>
+		 					<p class="hide-call">мы перезвоним Вам в течение 5 минут</p>
+						  <form method="post">
+								<input type="text" class="form-control" id="name fieldName" name="name" placeholder="Ваше имя...">
+								<input type="tel" class="form-control" id="phone" name="phone" placeholder="Ваш телефон...">
+								<button type="submit" data-attr="Узнать подробнее" class="">Получить консультацию</button>
+								<h6>Нажимая на кнопку, Вы даете согласие на <a href="https://3gstar.com.ua/personal-data-processing.html" target="_blank">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности</h6>
+								<div class="loading"></div>
+						  </form>
+					 		<div class="data-success"></div>
+			   	 	</div>
+					</div>					
+				</div>
+				<div class="col-sm-6 engineering-img">
+					<img src="images/engineering.png" alt="">					
+				</div>
+				<div class="clearfix"></div>	
+			</div>
+		</div>
+	</div>	
+	<!-- content-text-section -->
+	<div class="section">
+		<div class="container">
+			<h2 class="top-content-text">3G Интернет в г. Алчевск</h2>
+			<div class="row">
+				<div class="col-md-12">					
+					<div class="content-text">
+						<p>Всеукраинская веб-компания 3G Star предоставляет свои услуги по подключению высококачественного беспроводного 3G-Интернета в Украине уже свыше десяти лет. Компания была основана в 2005 году, с тех пор, 3G Star стала однозначным лидером по подключению непроводного 3G Интернета на территории Украины. Первенство на украинском рынке компании 3G Star принесла любовь и высокая оценка каждого клиента, который воспользовался услугами веб-компании, получил высокий сервис и качественные услуги.
+
+Одним из неоспоримых преимуществ компании 3G Star является то, что организация является официальных дилером таких украинских 3G Интернет-провайдеров, как МТС/Водафон, PeopleNet, Ютел, Интертелеком, Giraffe, Киевстар. За счет этого, веб-компания может подобрать и официально подключить высокоскоростной 3G Интернет от Интертелекома в Алчевске или от МТС в Алчевске. Подобное выгонное партнерство веб-компании 3G Star гарантирует алчевцам подключение выгодных тарифных планов также от такого известного провайдера, как Лайф – в Алчевске этот оператор также предоставляет покрытие 3G Интернета.
+
+Веб-компанию 3G Star также отличают такие качества, как:
+
+честность;
+компетентность;
+лояльный и индивидуальный подход к каждому клиенту;
+высокий уровень профессионализма;
+грамотность;
+огромный практический опыт работы с сотнями тысячами разных клиентов и абонентов по всей территории Украины.
+Менеджеры контакт-центра и сотрудники технического обеспечения всегда готовы оказать подробную консультацию по интересующему вопросу и ответить по теме подключения в Алчевске 3G – Интернета. Нашим консультантам можно задать вопрос по подбору оборудования и гаджетов, нужных для полноценной работы услуги 3G Интернета. Это - 3G роутеры, наружные усиливающие сигнал 3G антеннты, 3G модемы.
+
+В Интернет-магазине веб-компании 3G Star возможно приобрести все нужное оборудование по выгодной цене. Вся техника предварительно проходит тщательный тест-контроль, проверяется на комплектацию, внешний вид, работоспособность. Каждый клиент, который приобрел в Интернет-магазине компании 3G Star нужный гаджет, получает гарантию на 24 месяца. Два года гарантийного срока – это еще одно преимущество компании 3G Star по сравнению с аналогичными организациями, занимающимися подключением непроводного 3G Интернета. Они, в свою очередь, предоставляют гарантии сроком на три-шесть месяцев.</p>
+					</div>					
+				</div>
+			</div>
+		</div>		
+	</div>
+	<!-- why-our-company-section -->
+	<div class="section-whywe section blue-section">
+		<div class="container">
+			<h2 class="top-content-text color-white">Почему 100 000 абонентов выбрали 3GStar?</h2>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="heading-with-icon"><i class="icon-free"></i> <span>30 дней Бесплатного теста!</span></h3>
+          <p>Возьмите интернет на 30 дней БЕСПЛАТНО и сами убедитесь в высоком качестве!</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="heading-with-icon"><i class="icon-speed"></i> <span>Оперативное подключение!</span></h3>
+          <p>Сделай заказ сегодня и пользуйся интернетом уже завтра!</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="heading-with-icon"><i class="icon-easy"></i> <span>Простота использования!</span></h3>
+          <p>Настройка интернета не занимает больше 5-ти минут!</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="heading-with-icon"><i class="icon-consulting"></i> <span>Качественная консультация!</span></h3>
+          <p>Вы получаете подробную и развернутую консультацию по всем операторам связи и устройствам. Наш эксперт подберет вам самый лучший беспроводной интернет!</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="heading-with-icon"><i class="icon-experience"></i> <span>На рынке 8 лет!</span></h3>
+          <p>У нас богатый опыт и мы точно знаем как решить вашу задачу!</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="heading-with-icon"><i class="icon-warranty"></i> <span>Гарантия от 36 мес!</span></h3>
+          <p>На все обуродование предоставляется годовая гарантия!</p>
+        </div>
+			</div>
+		</div>
+	</div>
+	<!-- carousel-partners-section -->
+	<div class="our-clients">
+		<div class="container">
+			<div class="our-clients-head">
+				<h2 class="top-content-text">Наши партнеры</h2>
+			</div>
+      <div class="scroll-slider">											 
+				<div class="nbs-flexisel-container">
+					<div class="nbs-flexisel-inner">
+						<ul class="flexiselDemo3 nbs-flexisel-ul" style="left: -253.6px; display: block;">					    					    					       
+							<li><img src="images/c1.jpg"></li>
+							<li><img src="images/c2.jpg"></li>
+							<li><img src="images/c3.jpg"></li>
+							<li><img src="images/c4.jpg"></li>
+							<li><img src="images/c5.jpg"></li>
+							<li><img src="images/c6.jpg"></li>
+							<li><img src="images/c7.jpg"></li>
+							<li><img src="images/c8.jpg"></li>
+						</ul>
+						<div class="nbs-flexisel-nav-left" style="display:none"></div>
+						<div class="nbs-flexisel-nav-right" style="display:none"></div>
+					</div>
+				</div> 
+				<div class="clear"> </div>      
+			  <!---strat-image-cursuals---->
+				<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+					<!---End-image-cursuals---->
+					<script type="text/javascript">
+						$(window).load(function() {
+					    $(".flexiselDemo3").flexisel({
+								visibleItems: 4,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 3000,            
+								pauseOnHover: true,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems: 1
+											}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems: 2
+											},
+									tablet: { 
+										changePoint:768,
+										visibleItems: 3
+											}
+									}
+							});
+						});
+					</script>
+					<!---->
+				<!---->
+			  </div>				
+		</div>
+	</div>
+	<!-- reviews-section -->
+	<div class="section blue-section">
+		<div id="otzivi"></div>
+		<div class="container">
+			<h2 class="top-content-text">Отзывы</h2>
+			<div class="flex-box flex-between">
+				<div class="testimonial">
+					<p>Скористалися вашими послугами.Все працює, доставка супер.Дякуємо за увагу та доброзичливе ставлення.Успіхів вам у роботі!!!.))</p>
+					<div class="whopic">
+						<div class="arrow"></div>
+						<img src="https://goroda.3gstar.com.ua/newlpgoroda/img/uMzEMfSglQU.jpg" class="centered" alt="client 1">
+						<strong>Тетяна Огінська
+								<small>Клиент</small>
+						</strong>
+					</div>
+				</div>
+				<div class="testimonial">
+					<p>Спасибо большое.Хороший аппарат,лаконичный, ничего лишнего !Во всем разобралась:)Быстро доставили, ответили на все вопросы.Успехов в вашей работе.</p>
+					<div class="whopic">
+						<div class="arrow"></div>
+						<img src="https://goroda.3gstar.com.ua/newlpgoroda/img/kUKUGPHhZbI.jpg" class="centered" alt="client 1">
+						<strong>Егор Поляковский
+								<small>Клиент</small>
+						</strong>
+					</div>
+				</div>
+				<div class="testimonial">
+					<p>Я очень доволен, очень оперативно обслуживает клиента. Выражаю благодарность Софии, которая выполняла мой заказ</p>
+					<div class="whopic">
+						<div class="arrow"></div>
+						<img src="https://goroda.3gstar.com.ua/newlpgoroda/img/e_25d41075.jpg" class="centered" alt="client 1">
+						<strong>Алексей Городовой
+								<small>Клиент</small>
+						</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- contact-section -->
+	<div id="kontakti" class="contact-section text-center">
+		<div class="container">
+			<h2 class="top-content-text">Контакты</h2>
+			<div class="row">
+				<div class="contact-top">
+					<div class="col-sm-4  text-center">
+						<i class="smartphone"></i>
+						<div class="phone-footer">lifecell : <div class="utm" id="life-footer"><a href="tel:0634854003">(063) 485-40-03</a></div></div>
+						<div class="phone-footer">Kyivstar : <div class="utm" id="kievstar-footer"><a href="tel:0979930355">(097) 993-03-55</a></div></div>	
+						<div class="phone-footer">Vodafone : <div class="utm" id="vodafone-footer"><a href="tel:0503085856">(050) 308-58-56</a></div></div>
+					</div>
+					<div class="col-sm-4  text-center">
+						<i class="global"></i>
+						<p>г. Киев<p>
+						<p>м. Университет</p>
+						<p>ул. Богдана Хмельницкого, 94</p>
+					</div>
+					<div class="col-sm-4  text-center">
+						<i class="user"></i>						
+						<div class="messenger-viber"><p><a href="viber://pa?chatURI=3gstar" target="_blank"><i class="sb-ico ico-viber-sm"></i>Viber</a></p></div>
+						<div class="messenger-telegram"><p><a href="https://telegram.me/gstar_bot" target="_blank"><i class="sb-ico ico-telegram-sm"></i>Telegram</a></p></div>		
+						<p><a href="mail-to:order@3gstar.com.ua">order@3gstar.com.ua</a></p>				
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer-section -->
+	<div class="section footer-section blue-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 contact_left">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.6013096623274!2d30.497352515731322!3d50.448526479475106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef5673e5901%3A0x8756a47ebbf37ec4!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCA5NCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1536580727434" width="100%" height="381" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-4">
+					<div class="contact_right contact_footer">
+						<div class="contact-form_grid">
+							<h3 class="hide-call">Оставить заявку</h3>
+							<p class="hide-call">мы перезвоним Вам в течение 5 минут</p>
+							<form method="post">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя...">
+								<input type="tel" class="form-control" id="phone" name="phone" placeholder="Ваш телефон...">
+								<button type="submit" data-attr="Узнать подробнее" class="">Отправить</button>
+								<h6 class="grey-text-form">Нажимая на кнопку, Вы даете согласие на <a href="https://3gstar.com.ua/personal-data-processing.html" target="_blank">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности</h6>
+								<div class="loading"></div>
+							</form>
+							<div class="data-success"></div>
+						</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bottom-footer-section -->
+	<div class="footer text-center">
+		<div class="copyright">
+			<p>© 2008-<script type="text/javascript">var today = new Date();document.write(today.getFullYear());</script> Компания 3GStar - интернет там, где ты!</p>
+			<!-- «website by dvorichansky» -->
+		</div>
+	</div>
+	<!-- bitrix24 script -->
+	<script>
+		(function(w,d,u){
+			var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+		})(window,document,'https://cdn.bitrix24.ua/b3213975/crm/site_button/loader_2_wywo7d.js');
+  </script>
+  <!-- END bitrix24 script -->
+	<!-- link script -->
+	<script src="js/utm-scripts.js"></script>
+	<!-- <script src="js/scripts.js"></script> -->
+	<script src="js/form.script.min.js"></script>
+	<script src="js/form.options.js"></script>
+	<script src="js/main.js"></script>
+	<!-- envybox css -->
+	<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+	<!-- envybox script -->
+	<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=3acc0d2d81018280d77608d0f7761609" charset="UTF-8" async nomaps></script>
+	<!-- END link script -->
+	
+</body>
+</html>
