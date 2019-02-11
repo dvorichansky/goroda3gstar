@@ -71,6 +71,8 @@ function showPopupTooltip (element, tooltiptext, position, positionType, scrollT
 
 
 $(document).ready(function(){
+
+		const BACKEND_PATH = 'https://3gstar.com.ua/gsubmitclick.php';
     
     //mask
     $('input[name=phone]').mask("+38(999)999-99-99");
@@ -93,24 +95,22 @@ $(document).ready(function(){
             nameVal = form.find('#fieldName').val() ? form.find('#fieldName').val() : '',
             phoneVal = phone.val(),
             dataAttr = $(this).attr('data-attr') ? $(this).attr('data-attr') : '',
-            formVal  = 'Узнать подробнее';
+            formVal  = 'Узнать подробнее про интернет в моем городе';
             
       
       
       if(phoneVal !== ''){
         $(this).hide();
-        // console.log(nameVal+phoneVal+dataAttr+formVal); 
-        form.parent().find('.loading').html('<img src="images/loading_icon.gif" alt="loading">');
+        // console.log(nameVal+phoneVal+dataAttr+formVal);
+				form.hide();
+				form.parent().find('.hide-call').hide();
+				form.parent().find('.data-success').html('<h3>Спасибо!</h3><p>Ваша заявка отправлена!<br>Мы свяжемся с Вами в ближайшее время.</p>');
         $.ajax({
-          url: '/gsubmitclick.php',
+          url: BACKEND_PATH,
           type: 'POST',
           data: {phone:phoneVal, name:nameVal, form: formVal, comment: dataAttr},
           success: function() {
             window.dataLayer.push({ 'event': 'formsendads' });  
-            form.hide();
-            form.parent().find('.hide-call, .loading').hide();
-            form.parent().find('.data-success').html('<h3>Спасибо!</h3><p>Ваша заявка отправлена!<br>Мы свяжемся с Вами в ближайшее время.</p>');
-
           }
         });
       } else{
@@ -132,26 +132,24 @@ $(document).ready(function(){
             nameVal = form.find('#fieldName').val() ? form.find('#fieldName').val() : '',
             phoneVal = phone.val(),
             dataAttr = $(this).attr('data-attr') ? $(this).attr('data-attr') : '',
-            formVal  = 'Узнать подробнее';
+            formVal  = 'Форма три шага. Интернет в городе или деревне';
             
       
       
       if(phoneVal !== ''){
         $(this).hide();
         // console.log(nameVal+phoneVal+dataAttr+formVal); 
-        form.parent().find('.loading').html('<img src="images/loading_icon.gif" alt="loading">');
+        form.hide();
+				$( '.step-form-hide' ).hide();
+				$( '.step-flex' ).css({'justify-content':'center'});
+				form.parent().find('.hide-call, .step-order-form').hide();
+				form.parent().find('.data-success').html('<h3>Спасибо!</h3><p>Ваша заявка отправлена!<br>Мы свяжемся с Вами в ближайшее время.</p>');
         $.ajax({
-          url: '/gsubmitclick.php',
+          url: BACKEND_PATH,
           type: 'POST',
           data: {phone:phoneVal, name:nameVal, form: formVal, comment: dataAttr},
           success: function() {
-            window.dataLayer.push({ 'event': 'formsendads' });  
-            form.hide();
-            $( ".step-form-hide" ).hide();
-            form.parent().find('.hide-call, .step-order-form, .loading').hide();
-            form.parent().find('.data-success').html('<h3>Спасибо!</h3><p>Ваша заявка отправлена!<br>Мы свяжемся с Вами в ближайшее время.</p>');
-
-
+						window.dataLayer.push({ 'event': 'formsendads' });  
           }
         });
       } else{
@@ -159,7 +157,7 @@ $(document).ready(function(){
          phone.css({'border-color':'#fea179'});
 				 showPopupTooltip(phone, 0, 'top', 0, 'scroll');
 
-      }
+			}
           
       });
     // сбор форм 3 шага

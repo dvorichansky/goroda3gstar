@@ -194,7 +194,7 @@ h3{
     -ms-transform-origin: 12px 50%;
 }
 .menuButton:hover span{
-    background: #252525;
+    background: #fff;
 }
 .mainMenu{
     text-align: right;
@@ -414,10 +414,15 @@ i.phone {
 .banner{
 	background: url('../images/banner.jpg') no-repeat 0px 0px;
 	background-size: cover;
-	min-height: 630px;
+	/* min-height: 630px; */
 	position: relative;
-	margin-top: -105px;
 	z-index: 0;
+}
+.banner-overlay{
+	background: rgba(0, 0, 0, 0.4);
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 .banner-info h1{
 	color: #fff;
@@ -438,15 +443,20 @@ i.phone {
 	color: #fff; 
 	margin-top: 15px;
 }
+.banner .container-flex{
+	display: flex;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	justify-content: flex-start;
+}
 
 .banner-info {
 	background: rgba(92, 162, 204, 0.7);
-	width: 40%;
+	width: 65%;
 	min-width: 600px;
-	position: absolute;
-	top: 23%;
-	left: 14%;
+	position: relative;
 	padding: 2.5em 2em;
+	margin-right: 5%;
 }
 
 .subscribe-section{
@@ -481,42 +491,6 @@ i.phone {
 	font-size: 1.05em;
 	line-height:1.4em;
 	margin:8px 0 15px 0;
-}
-i.call{
-	width: 60px;
-	height: 70px;
-	background: url('../images/img-sprite.png') no-repeat -35px 0px;
-	display: inline-block;	
-}
-i.callmsg{
-	width: 70px;
-	height: 70px;
-	background: url('../images/img-sprite.png') no-repeat -98px 0px;
-	display: inline-block;
-}
-i.interact{
-	width: 130px;
-	height: 130px;
-	background: url('../images/img-sprite.png') no-repeat -170px 0px;
-	display: inline-block;
-}
-i.dt{
-	width: 80px;
-	height: 70px;
-	background: url('../images/img-sprite.png') no-repeat -311px 0px;
-	display: inline-block;
-}
-i.zoom{
-	width: 70px;
-	height: 70px;
-	background: url('../images/img-sprite.png') no-repeat -401px -2px;
-	display: inline-block;
-}
-i.arrow{
-	width: 35px;
-	height: 35px;
-	background: url('../images/img-sprite.png') no-repeat -471px 0px;
-	display: inline-block;
 }
 i.smartphone{
 	width: 70px;
@@ -610,27 +584,27 @@ i.icon-warranty{
 .ico-viber-sm:before {
 	width: 15px;
 	height: 15px;
-	background-position: -290px -44px;
+	background-position: -142px -55px;
 }
 .ico-telegram-sm:before {
   width: 15px;
   height: 15px;
-  background-position: -256px -43px;
+  background-position: -108px -54px;
 }
 .ico-kievstar:before {
 	width: 15px;
 	height: 15px;
-	background-position: -221px -9px;
+	background-position: -39px -3px;
 }
 .ico-vodafone:before {
 	width: 15px;
 	height: 15px;
-	background-position: -186px -9px;
+	background-position: -3px -3px;
 }
 .ico-lifecell:before {
   width: 15px;
   height: 15px;
-  background-position: -256px -9px;
+  background-position: -73px -5px;
 }
 .arrow1 {
 	margin-top: 15px;
@@ -761,10 +735,11 @@ i.icon-warranty{
 	border-right: 20px outset transparent;
 }
 .testimonial .whopic img {
-	margin-top: 10px;
+	margin: 10px 0 0 5px;
 	width: 50px;
 	height: 50px;
 	float: left;
+	border-radius: 100%;
 }
 .centered {
 	margin-left: auto;
@@ -1117,6 +1092,9 @@ i.linkedin{
 	font-weight: 300;
 	margin-top: 1em;
 }
+.copyright br{
+	display: none;
+}
 
 /* -------- */
 .section-whywe p{
@@ -1422,10 +1400,8 @@ form h6 a{
 .contact_head{
 	background: rgba(92, 162, 204, 0.7);
 	padding: 2em 1.85em;
-	top: 23%;
-	position: absolute;
-	width: 380px;
-	right: 14%;
+	position: relative;
+	width: 30%;
 	text-align: left;
 	color: #fff;
 	display: none;
@@ -1691,25 +1667,6 @@ h2.with-line {
 	margin: 15px 0 27px 0;
 	opacity: 0.6;
 }
-.right_column li {
-	line-height: 14px;
-	padding: 7px 0 7px 18px;
-	background: url(../images/bullet.png) left 16px no-repeat;
-	font-size: 13px;
-	list-style-type:none;
-}
-.right_column li a { 
-	color: #333333;
-	font-weight: 400;
-	font-size: 0.965em;
-	line-height: 1.8em;
-	opacity: 0.6;
-	text-decoration:none;
-}
-.right_column li a:hover{
-	color:#fc5700;
-	padding-left:10px;
-}
 .grid_b4 {
 	float: left;
 	width: 56%;
@@ -1782,82 +1739,13 @@ p.text1 {
 	margin: 15px 0 27px 0;
 	opacity: 0.6;
 }
-#commentform input[type="text"] {
-	padding: 8px 15px;
-	width: 60%;
-	color: #444;
-	font-size: 1em;
-	border: 1px solid #eee;
-	background: #eee;
-	outline: none;
-	display: block;
-}
+
 .leave h4 {
 	color: #1f3e4f;
 	font-size: 1.8em;
 	font-weight: 400;
 	letter-spacing: 1px;
 	margin-bottom: 12px;
-}
-#commentform label {
-	display: block;
-	font-size: 1em;
-	color: #888;
-}
-#commentform span {
-	color: #A60000;
-	position: absolute;
-}
-#commentform input[type="text"] {
-	padding: 8px 15px;
-	width: 60%;
-	color: #444;
-	font-size: 1em;
-	border: 1px solid #eee;
-	background: #eee;
-	outline: none;
-	display: block;
-}
-#commentform textarea {
-	padding: 13px 20px;
-	width:60%;
-	color: #444;
-	font-size:0.85em;
-	outline: none;
-	height:150px;
-	display: block;
-	resize: none;
-	font-weight:400;
-	border: 1px solid #eee;
-	background: #eee;
-}
-#commentform input[type="submit"], {
-	padding: 12px 50px;
-	color: #FFF;
-	background: #444;
-	outline: none;
-	border: none;
-	text-transform: uppercase;
-	cursor: pointer;
-	-webkit-appearance: none;
-	font-size: 1.2em;
-	font-weight: 500;
-}
-#commentform input[type="submit"]:hover {
-	background:#222;
-}
-.comments1 {
-	margin-top: 3em;
-}
-#commentform p {
-	position: relative;
-	padding: 8px 0;
-	font-size: 1em;
-}
-.comments-main {
-	border: 1px solid #D5D4D4;
-	padding: 17px 0px;
-	margin: 15px 0px 40px 0;
 }
 .cmnts-right a {
 	padding: 6px 12px;
@@ -1875,94 +1763,24 @@ p.text1 {
 .Archives {
 margin-bottom:3em;
 }
-.cmts-main-left img{
-	border: 3px solid#ccc;
-}
-.cmnts-right a:hover{
-	background: #333;
-	text-decoration:none;
-}
-.cmts-main-right h5 {
-	font-size: 1em;
-	color: #4e4e4b;
-	margin: 0px;
-	font-weight: 600;
-}
-.comments1 h4 {
-	color: #1f3e4f;
-	font-size: 1.8em;
-	font-weight: 400;
-	letter-spacing: 1px;
-	margin-bottom: 12px;
-}
-.cmts-main-right p{
-	color: #333333;
-	font-weight: 400;
-	font-size: 0.9em;
-	line-height: 1.9em;
-	opacity: 0.6;
-	margin: 2px 0 15px 0px;
-}
-.cmnts-left p {
-	font-size: 13px;
-	color:#999;
-	font-weight: 600;
-	margin: 15px 0px;
-}
 
-/* vk comments */
-.post_table{
-	border: 1px solid #D5D4D4;
-	background: #f1f1f1;
-	padding: 15px;
-	margin-bottom: 25px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-}
-.post_image{
-	min-width: 50px;
-}
-.post_info{
+.content-text ul{
+	list-style: inside;
+	line-height: 1.7em;
+	margin-bottom: 15px;
 	margin-left: 15px;
 }
-.wall_text{
-	font-size: 1em;
-	color: #4e4e4b;
-	margin: 0px;
-	font-weight: 600;
+.content-text p{
+	line-height: 1.7em;
+	margin-bottom: 15px;
 }
-.wall_post_text{
-	color: #333333;
-	font-weight: 400;
-	font-size: 0.9em;
-	line-height: 1.9em;
-	opacity: 0.6;
-	margin: 2px 0 15px 0px;
-}
-.reply_link_wrap .rel_date{
-	font-size: 13px;
-	color: #999;
-	font-weight: 600;
-	margin: 15px 0px;
-}
+
+
 /*-- responsive-design starts-here --*/
 
 @media screen and (max-width: 1366px) {
-	.banner{
-		min-height: 600px;
-	}
-	.banner-info {
-		left: 8%;
-		padding: 2em 1.5em;
-	}
 	.top-content-text{
 		font-size: 2.4em;
-	}
-	.contact_head{
-		right: 8%;
 	}
 	.header-right h4 {
 		font-size: 1.9em;
@@ -2062,13 +1880,7 @@ margin-bottom:3em;
 	.map iframe {
 		min-height: 400px;
 	}
-	.contact_head{
-		right: 4.5%;
-	}
-	.banner-info {
-		left: 4.5%;
-		min-width: 550px;
-	}
+
 	.banner-info p {
 		font-size: 1.35em;
 		line-height: 1.4em;
@@ -2138,24 +1950,6 @@ margin-bottom:3em;
 	}
 	.banner-info p {
 		font-size: 1.25em;
-	}
-	.banner-info {
-		width: 100%;
-		left: 0;
-		padding: 1.3em 1.3em 1.6em 1.3em;
-		position: relative;
-	}
-	.contact_head{
-		position: relative;
-    right: 0;
-    margin-top: 30px;
-    width: 100%;
-    padding: 1.3em 1.3em 1.6em 1.3em;
-	}
-	.banner {
-		min-height: auto;
-		padding: 30px 0;
-		margin: 0;
 	}
 	.services-section {
 		padding: 2em 0 3em 0;
@@ -2421,6 +2215,28 @@ margin-bottom:3em;
 	.mainMenu > ul > li.active > a{
 		text-decoration: none;
 	}
+	.container-flex{
+		flex-direction: column;
+	}
+	.contact_head{
+		margin-left: 0;
+	}
+	.banner-info {
+		width: 100%;
+		left: 0;
+		padding: 1.3em 1.3em 1.6em 1.3em;
+		position: relative;
+	}
+	.contact_head{
+		position: relative;
+    right: 0;
+    margin-top: 30px;
+    width: 100%;
+    padding: 1.3em 1.3em 1.6em 1.3em;
+	}
+	.home-post{
+		margin-top: 30px;
+	}
 }
 @media screen and (max-width: 766.98px) {
 	.banner-info{
@@ -2566,43 +2382,6 @@ margin-bottom:3em;
 	.testimonials-section {
 		min-height: 290px;
 	}
-	span.menu{
-		width:28px;
-		height:28px;
-		background:url(../images/nav.png)no-repeat;
-		display: inline-block;
-		float:right;
-		cursor: pointer;
-		margin-top: -38px;
-	}
-	.top-menu{
-		width:100%;
-		display: none;
-		text-align:center;
-		background:#fff;
-		padding:0;
-		margin-top:10px;
-	}
-	.top-menu ul{
-		float:none;
-		width:100%;
-	}
-	.top-menu ul li{
-		display:block;
-		float: none;
-	}
-	.top-menu ul li a{
-		color:#000;
-		display: block;
-		padding: 10px 0px;
-		border-bottom: 3px solid #fff;
-	}
-	.top-menu ul li a.active{
-		border-bottom: 3px solid #fc5700;
-	}
-	.top-menu ul li a:hover{
-		border-bottom: 3px solid #fc5700;
-	}
 	.header-right {
 		width: 100%;
 	}
@@ -2741,9 +2520,6 @@ margin-bottom:3em;
 	.contact-top .col-sm-4{
 		margin-bottom: 20px;
 	}
-	.home-post{
-		margin-top: 30px;
-	}
 	.step-order-form-row{
 		padding: 0;
 	}
@@ -2808,53 +2584,17 @@ margin-bottom:3em;
 	.services-section p {
 		font-size: 0.95em;
 	}
-	i.call {
-		width: 40px;
-		height: 50px;
-		background: url('../images/img-sprite.png') no-repeat -28px 0px;
-		background-size: 450px;
-	}
-	i.callmsg {
-		width: 55px;
-		height: 50px;
-		background: url('../images/img-sprite.png') no-repeat -72px -2px;
-		background-size: 450px;
-	}
 	.arrow2 {
 		margin-top: 14px;
 	}
 	.arrow1 {
 		margin-top: 12px;
 	}
-	i.arrow {
-		width: 30px;
-		height: 30px;
-		background: url('../images/img-sprite.png') no-repeat -392px 0px;
-		background-size: 500px;
-	}
-	i.interact {
-		width: 100px;
-		height: 100px;
-		background: url('../images/img-sprite.png') no-repeat -125px 2px;
-		background-size: 450px;
-	}
 	.arrow3 {
 		margin-top: 40px;
 	}
-	i.dt {
-		width: 65px;
-		height: 55px;
-		background: url('../images/img-sprite.png') no-repeat -231px 0px;
-		background-size: 450px;
-	}
 	.services-section p {
 		margin: 8px 0 0px 0;
-	}
-	i.zoom {
-		width: 50px;
-		height: 55px;
-		background: url('../images/img-sprite.png') no-repeat -302px -2px;
-		background-size: 450px;
 	}
 	.icons2 {
 		margin-top: 1em;
@@ -3255,6 +2995,9 @@ margin-bottom:3em;
 	}
 	h3.heading-with-icon span{
 		margin-top: 10px;
+	}
+	.copyright br{
+		display: block;
 	}
 }
 @media screen and (max-width: 319.98px) {
@@ -3671,7 +3414,7 @@ margin-bottom:3em;
 		display: none;
 	}
 	.mainMenu img{
-		max-width: 80%;
+		max-width: 160px;
 		margin-top: 2.5px;
 	}
 }

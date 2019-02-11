@@ -4,7 +4,7 @@
 	$(document).ready(function() {	
 		//Menu ========================
 		$(window).on('scroll', function () {
-			if ($(window).scrollTop() > 70)
+			if ($(window).scrollTop() > 200)
 			{
 				$("#mainmenu").addClass('fixedHeader');
 			}
@@ -28,14 +28,14 @@
 				}
 				else
 				{
-					$('html, body').animate({scrollTop: $(this.hash).offset().top - 70}, 1000);
+					$('html, body').animate({scrollTop: $(this.hash).offset().top - 200}, 1000);
 					$(".mainMenu ul").slideUp('slow');
 					$(".menuButton").removeClass('active');
 				}
 			}
 			else
 			{
-				$('html, body').animate({scrollTop: $(this.hash).offset().top - 70}, 1000);
+				$('html, body').animate({scrollTop: $(this.hash).offset().top - 200}, 1000);
 			}
 			return false;
 		});
