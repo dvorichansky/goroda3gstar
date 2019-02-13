@@ -196,21 +196,17 @@ h3{
 .menuButton:hover span{
     background: #fff;
 }
-.mainMenu{
-    text-align: right;
-    position: absolute;
-}
 .mainMenu > ul{
-    margin: 0;
-    padding: 0;
-    float: left;
+	margin: 0;
+	padding: 0;
 	position: relative;
+	display: flex;
+	justify-content: space-between;
+
 }
 .mainMenu > ul > li {
-  float: left;
   line-height: 10px;
   list-style: outside none none;
-  margin-right: 50px;
   padding: 15px 0;
   position: relative;
 }
@@ -374,6 +370,10 @@ input[type="search"].sb-search-input {
 	font-size: 12px;
 	color: #329cd6;
 	font-weight: 400;
+	margin: 0;
+}
+.mobile-numbers{
+	line-height: 22px;
 }
 i.phone {
 	width: 35px;
@@ -568,7 +568,7 @@ i.icon-warranty{
 .messenger li {
 	display: flex;
 	align-items: center;
-	margin-top: 7px;
+	margin-top: 10px;
 }
 .messenger-viber a {
     color: #7c529b;
